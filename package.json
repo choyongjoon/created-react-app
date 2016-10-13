@@ -1,18 +1,40 @@
 {
-  "name": "dldl",
+  "name": "created-react-app",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.6.1"
   },
   "dependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "compression": "^1.6.2",
+    "debug": "^2.2.0",
+    "eslint": "^3.8.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-config-standard-react": "^4.2.0",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-react": "^6.4.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "socket.io": "^1.5.0",
+    "socket.io-client": "^1.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run build && npm run start:server",
+    "server": "DEBUG=server:* nodemon --exec babel-node server",
+    "client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "stage-0",
+      "es2015"
+    ]
   }
 }
