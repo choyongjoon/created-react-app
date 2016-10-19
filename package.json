@@ -24,7 +24,7 @@
     "socket.io-client": "^1.5.0"
   },
   "scripts": {
-    "start": "npm run build && npm run start:server",
+    "start": "npm run build && npm run server",
     "server": "DEBUG=server:* nodemon --exec babel-node server",
     "client": "react-scripts start",
     "build": "react-scripts build",
